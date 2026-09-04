@@ -8,7 +8,8 @@ export default defineNuxtConfig({
   modules: ['@primevue/nuxt-module', '@pinia/nuxt'],
   primevue: {
     components: {
-      prefix: 'Prime'
+      prefix: 'Prime',
+      include: ['Button', 'DataTable', 'Card', 'Tag', 'Avatar']
     },
     options: {
       theme: {

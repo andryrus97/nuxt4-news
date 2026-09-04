@@ -21,6 +21,8 @@ export const useNewsStore = defineStore('news', {
       try {
         const data = await $fetch<{ articles: INews[] }>(url)
         this.news = data.articles ?? []
+
+        return data.articles
       } catch (err: any) {
         this.error = err.message || 'Failed to fetch news'
         throw err
